@@ -18,4 +18,13 @@ def move_pointees():
                 
     return new_board
 
+def game_round():
+    global board
+    board = move_pointees()
 
+def coupon_values():
+    return board
+
+def highest_value_coupon():
+    max_value = max(map(max, board))
+    return [(i,j) for i in range(board_size) for j in range(board_size) if board[i][j] == max_value]
