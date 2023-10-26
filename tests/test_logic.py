@@ -11,7 +11,11 @@ class TestGameLogic(unittest.TestCase):
         new_board = move_pointees()
         self.assertNotEqual(board, new_board)
 
-
+    def test_coupon_values(self):
+        self.assertTrue(isinstance(coupon_values(), list))
+    
+    def test_highest_value_coupon(self):
+        self.assertTrue(isinstance(highest_value_coupon(), list))
 
 if __name__ == '__main__':
     unittest.main()
